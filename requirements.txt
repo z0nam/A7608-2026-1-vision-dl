@@ -6,5 +6,14 @@ seaborn==0.13.2
 scikit-learn==1.5.2
 tensorflow==2.18.0
 
+# Notebook rendering / seminar workflow
+ipykernel==7.2.0
+ipywidgets==8.1.8
+jupyter==1.1.1
+jupyterlab==4.5.6
+nbconvert==7.17.0
+nbformat==5.10.4
+notebook==7.5.5
+
 # Optional: only needed when running notebooks inside Google Colab.
 # google-colab

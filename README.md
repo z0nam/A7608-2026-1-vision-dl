@@ -35,3 +35,22 @@ file_uploaded=files.upload() </br>
 from google.colab import drive </br>
 drive.mount('/content/drive/') </br>
 
+### =========================================
+### 발표 작업 워크플로
+
+이 저장소는 교과서 실습 코드뿐 아니라, 장별 발표 준비 작업도 함께 진행한다.
+
+- 발표 작업은 해당 장 폴더 바로 아래에 필요한 폴더만 납작하게 만든다.
+- 교과서 스캔본이 있으면 원본은 별도 보관 폴더로 옮기고, 전처리한 페이지를 기준 문서로 사용한다.
+- 저작권 이슈가 있는 원본 스캔은 반드시 `.gitignore`에 추가한다.
+- 발표에 쓰는 그림은 가능하면 교과서 캡처보다 실습 코드 출력으로 다시 만든다.
+- 다른 세션에서 이어서 작업할 수 있도록 장별 `context.md`를 유지한다.
+
+권장 구조 예시는 다음과 같다.
+
+- `chapXX/book/`: 원본 스캔, 전처리본, OCR 텍스트, 페이지 인덱스
+- `chapXX/code/`: 발표용으로 다듬은 실습 코드
+- `chapXX/tools/`: OCR 등 자료 정리용 처리 스크립트
+- `chapXX/slides/`: 최종 LaTeX beamer 발표 자료
+- `chapXX/slides/figures/`: 슬라이드에서 쓰는 그림
+- `chapXX/context.md`: 다음 세션 인수인계 문서
