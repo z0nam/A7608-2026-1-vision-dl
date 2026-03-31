@@ -1,10 +1,21 @@
-torch==2.5.1
+# Chapter 3 essentials
+# Used by `chap03/python_3장.ipynb`, `chap03/colab_3장.ipynb`,
+# and the helper scripts under `chap03/code/`.
 numpy==1.26.4
 pandas==2.2.3
 matplotlib==3.9.2
 seaborn==0.13.2
 scikit-learn==1.5.2
-tensorflow==2.18.0
+tensorflow==2.16.2
+
+# Other chapters / repo-wide
+# PyTorch stack:
+# - `torch==1.13.1` works with Python 3.10 in this repo.
+# - `torchtext==0.14.1` keeps `torchtext.legacy` available for Chapter 7.
+# - `torchvision==0.14.1` matches the same torch release for Chapters 5, 7, 8, 12, 13.
+torch==1.13.1
+torchvision==0.14.1
+torchtext==0.14.1
 
 # Notebook rendering / seminar workflow
 ipykernel==7.2.0
@@ -17,3 +28,7 @@ notebook==7.5.5
 
 # Optional: only needed when running notebooks inside Google Colab.
 # google-colab
+
+# Chapter 3 OCR tooling uses external CLI tools, not pip packages:
+# - `tesseract`
+# - `sips` (macOS)
