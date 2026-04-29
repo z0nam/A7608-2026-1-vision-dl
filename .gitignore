@@ -1,4 +1,8 @@
 .venv/
+.venv-chap07/
+.vscode/
+.DS_Store
+_midterm_report/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/

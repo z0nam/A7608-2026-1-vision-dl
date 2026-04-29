@@ -1,0 +1,15 @@
+from pathlib import Path
+
+import numpy as np, cv2
+
+IMAGE_DIR = Path(__file__).resolve().parent / "images"
+
+image = cv2.imread(str(IMAGE_DIR / "canny.jpg"), cv2.IMREAD_GRAYSCALE)
+if image is None: raise Exception("영상 파일 읽기 오류")
+
+
+             # OpenCV 캐니 에지
+
+cv2.imshow("image", )
+cv2.imshow("OpenCV_Canny", )           # OpenCV 캐니 에지
+cv2.waitKey(0) 

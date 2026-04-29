@@ -9,9 +9,17 @@ scikit-learn==1.5.2
 tensorflow==2.16.2
 
 # Other chapters / repo-wide
+# OpenCV:
+# - Pin to a NumPy 1.26-compatible build so it does not force NumPy 2.x and
+#   break TensorFlow-based chapters in the shared environment.
+opencv-python==4.10.0.84
+#
 # PyTorch stack:
 # - `torch==1.13.1` works with Python 3.10 in this repo.
-# - `torchtext==0.14.1` keeps `torchtext.legacy` available for Chapter 7.
+# - `torchtext==0.14.1` does NOT provide `torchtext.legacy`.
+# - Chapter 7 notebooks still use the legacy `Field`/`BucketIterator` API and
+#   therefore need a separate older environment (for example Python 3.7/3.8
+#   with a matching legacy torchtext stack) or a notebook refactor.
 # - `torchvision==0.14.1` matches the same torch release for Chapters 5, 7, 8, 12, 13.
 torch==1.13.1
 torchvision==0.14.1
