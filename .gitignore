@@ -3,6 +3,7 @@
 .vscode/
 .DS_Store
 _midterm_report/
+.tmp_ocr/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
