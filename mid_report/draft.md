@@ -2,25 +2,23 @@
 
 ## 내가 해야 할 일
 
-- [ ] 발제 일정표에서 내 담당 주차, 장, 발표 범위를 최종 확인한다.
-- [ ] 이 중간리포트 주제가 수업 발제 내용과 겹치는지 확인한다.
-  - 겹친다면 리포트의 비교 모델을 발제 내용과 연결한다.
-  - 겹치지 않는다면 리포트는 독립 과제로 유지한다.
-- [ ] 과제 안내문 기준으로 제출 조건을 다시 확인한다.
+- [ ] 제출 일정 확인: 과제 안내문 기준 제출일은 2026년 5월 5일 수업 전까지이다.
+- [ ] 작성 조건 확인
   - A4 5페이지 이내
   - 한글 문서 기본 여백
   - 10pt
   - 줄 간격 160%
   - 참고문헌 포함
+  - 비교와 분석 중심 작성
   - 인터넷 자료 복사/붙여넣기 금지
 - [ ] 원 논문 또는 공식 자료에서 각 모델의 핵심 근거를 확인한다.
-  - AlexNet: ImageNet 성능 향상, ReLU, dropout, GPU 학습
-  - VGG: 3x3 convolution 반복과 깊은 구조
-  - ResNet: residual block, skip connection, 깊은 네트워크 학습 문제
-  - EfficientNet: compound scaling, depth/width/resolution 균형
+  - 핵심 논문 1: AlexNet - ImageNet 성능 향상, ReLU, dropout, GPU 학습
+  - 핵심 논문 2: ResNet - residual block, skip connection, 깊은 네트워크 학습 문제
+  - 핵심 논문 3: EfficientNet - compound scaling, depth/width/resolution 균형
+  - 보조 논문: VGG - 3x3 convolution 반복과 깊은 구조
 - [ ] 본문에 넣을 표 1개를 최종 확정한다.
-  - 현재 초안의 모델 비교 표를 유지할지
-  - 정확도/파라미터/FLOPs 비교 표로 바꿀지 결정
+  - 현재 초안의 모델 비교 표를 유지하는 방향이 안전하다.
+  - 정확도/파라미터/FLOPs 비교 표는 수치 출처 확인 후에만 사용한다.
 - [ ] 그림을 넣을지 결정한다.
   - 넣는다면 CNN 기본 구조 그림 또는 ResNet residual block 그림 1개 정도가 적절하다.
   - 5페이지 제한이 있으므로 그림은 최대 1개만 권장한다.
@@ -37,6 +35,30 @@
   - 논문 abstract나 인터넷 설명문과 비슷한 표현은 피한다.
   - 모델 설명은 내 말로 구조와 의미를 다시 설명한다.
 - [ ] 한글 문서 또는 제출 형식으로 옮긴 뒤 5페이지 이내인지 확인한다.
+
+## 과제 요건 대응표
+
+| 과제 안내문 요구사항 | 현재 초안 대응 | 보완할 점 |
+| --- | --- | --- |
+| 문제 정의 | 2장에서 이미지 분류 문제와 CNN 기본 구조 설명 | 문제 정의 문단을 조금 더 간결하게 정리 |
+| 대표 모델 3개 이상 비교 | AlexNet, VGG, ResNet, EfficientNet 4개 비교 | 4개 모두 유지 |
+| 모델 구조 또는 핵심 아이디어 | 3장에서 모델별 핵심 아이디어 설명 | 논문 근거 문장 보강 |
+| 평가 지표 설명 | 4장에서 Accuracy, Top-1, Top-5, Parameters, FLOPs 설명 | 지표별 의미를 더 짧게 정리 |
+| 장단점 분석 | 3장 설명과 5장 비교 표에 포함 | 표를 최종본 기준으로 다듬기 |
+| 본인 의견 또는 향후 발전 방향 | 6장에서 ResNet과 EfficientNet 중심 의견 제시 | 개인적인 학습 관점 추가 |
+| 참고문헌 포함 | 원 논문 4개와 PyTorch 문서 포함 | 형식 통일, 공식 자료 여부 확인 |
+| 비교와 분석 중심 | 5장 비교 분석 포함 | 단순 설명 문단을 일부 줄이고 비교 문장 강화 |
+
+## 핵심 논문 3개
+
+이번 리포트의 중심 논문은 AlexNet, ResNet, EfficientNet 세 편으로 잡는다. VGG도 비교 대상에는 포함하지만, 핵심 논문 3개에서는 보조 참고문헌으로 둔다. 이유는 세 논문이 CNN의 발전 흐름을 더 분명하게 보여주기 때문이다. AlexNet은 대규모 이미지 분류에서 깊은 CNN의 가능성을 보여준 출발점이고, ResNet은 깊은 네트워크 학습 문제를 해결한 전환점이며, EfficientNet은 정확도와 계산 효율을 함께 고려하는 현대적 설계 방향을 보여준다.
+
+| 구분 | 논문 | 리포트에서 쓸 핵심 내용 |
+| --- | --- | --- |
+| 핵심 1 | Krizhevsky, Sutskever, Hinton, "ImageNet Classification with Deep Convolutional Neural Networks", 2012 | CNN 기본 구조, ReLU, dropout, data augmentation, GPU 학습 |
+| 핵심 2 | He, Zhang, Ren, Sun, "Deep Residual Learning for Image Recognition", 2016 | residual block, skip connection, 깊은 네트워크 학습 문제 |
+| 핵심 3 | Tan and Le, "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks", 2019 | compound scaling, depth/width/resolution 균형, 효율적 CNN 설계 |
+| 보조 | Simonyan and Zisserman, "Very Deep Convolutional Networks for Large-Scale Image Recognition", 2014 | 3x3 convolution 반복, 깊은 구조의 직관적 예시 |
 
 ## 1. 서론
 

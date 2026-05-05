@@ -8,6 +8,29 @@
 - 기존 `chap03/` 폴더는 Chapter 3 발표/실습 자료용으로 유지한다.
 - 과제 안내 PDF 원본 위치: `A7608_mid_report_CNN/00.Object/중간 레포트_수정본1.pdf`
 
+### 과제 안내문 기준 요구사항
+
+- 과제명: CNN 기반 컴퓨터 비전 방법의 이해와 응용: 분류, 검출, 분할 관점에서의 비교 분석
+- 과제 목적: 컴퓨터 비전에서 CNN 기반 방법들의 문제 정의, 대표 모델, 평가 지표, 장단점을 이해하고 비교ㆍ분석
+- 선택 영역: 이미지 분류, 객체 검출, 의미 분할 중 하나
+- 반드시 포함할 내용
+  - 문제 정의
+  - 대표 모델 3개 이상 비교
+  - 모델의 구조 또는 핵심 아이디어 설명
+  - 평가 지표 설명
+  - 장단점 분석
+  - 본인 의견 또는 향후 발전 방향
+- 작성 조건
+  - A4 5페이지 이내
+  - 한글 문서 기본 여백
+  - 10pt
+  - 줄 간격 160%
+  - 참고문헌 포함
+  - 비교와 분석 중심으로 작성
+  - 인터넷 자료 복사ㆍ붙여넣기 금지
+  - 참고문헌은 논문, 교재, 공식 자료 활용
+- 제출 일정: 2026년 5월 5일 수업 전까지 INU CLASS 제출
+
 ### 선택 주제
 
 - 과제명: CNN 기반 컴퓨터 비전 방법의 이해와 응용: 분류, 검출, 분할 관점에서의 비교 분석
@@ -36,6 +59,43 @@
 - AlexNet, VGG, ResNet, EfficientNet은 CNN 구조를 어떤 방향으로 발전시켰는가?
 - 깊이, 연결 방식, 파라미터 수, 계산량, 정확도 사이에는 어떤 trade-off가 있는가?
 - 단순히 정확도가 높은 모델이 항상 좋은 모델이라고 볼 수 있는가?
+
+### 과제 요건 대응 계획
+
+| 과제 요건 | 초안 대응 방식 | 상태 |
+| --- | --- | --- |
+| 문제 정의 | 이미지 분류 문제와 CNN 기본 구조를 2장에서 설명 | 초안 있음 |
+| 대표 모델 3개 이상 비교 | AlexNet, VGG, ResNet, EfficientNet 4개 비교 | 초안 있음 |
+| 구조 또는 핵심 아이디어 | 각 모델별 핵심 아이디어를 3장에서 설명 | 초안 있음, 논문 근거 보강 필요 |
+| 평가 지표 설명 | Accuracy, Top-1, Top-5, Parameters, FLOPs 등 설명 | 초안 있음 |
+| 장단점 분석 | 모델별 설명과 비교 표에 반영 | 초안 있음 |
+| 본인 의견/향후 발전 방향 | ResNet과 효율적 CNN 설계 관점으로 6장 작성 | 보강 필요 |
+| 참고문헌 | 원 논문 4개와 공식 문서 후보 포함 | 형식 정리 필요 |
+| 5페이지 이내 | 현재 Markdown 초안은 압축 전 상태 | 한글 문서 변환 후 조정 필요 |
+
+### 핵심 논문 3개
+
+리포트의 중심 논문은 다음 3개로 선정한다. 기준은 CNN 발전 흐름을 가장 잘 설명하는지 여부이다.
+
+1. AlexNet
+   - Krizhevsky, Sutskever, Hinton, "ImageNet Classification with Deep Convolutional Neural Networks", NeurIPS 2012.
+   - 선정 이유: 대규모 이미지 분류에서 깊은 CNN의 가능성을 보여준 출발점이다.
+   - 리포트에서 사용할 부분: CNN 기본 구조, ReLU, dropout, data augmentation, GPU 학습.
+
+2. ResNet
+   - He, Zhang, Ren, Sun, "Deep Residual Learning for Image Recognition", CVPR 2016.
+   - 선정 이유: 깊은 네트워크가 학습하기 어려운 문제를 residual learning과 skip connection으로 해결했다.
+   - 리포트에서 사용할 부분: 깊이 증가의 문제, gradient 전달, residual block의 의미.
+
+3. EfficientNet
+   - Tan and Le, "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks", ICML 2019.
+   - 선정 이유: CNN 발전이 정확도 중심에서 정확도와 효율의 균형으로 이동했음을 보여준다.
+   - 리포트에서 사용할 부분: depth, width, resolution의 compound scaling, 효율적 CNN 설계.
+
+보조 논문:
+
+- VGG: Simonyan and Zisserman, "Very Deep Convolutional Networks for Large-Scale Image Recognition", 2014.
+- VGG는 본문 비교 대상에는 유지하되, 핵심 3개 논문에서는 제외한다. 이유는 VGG가 CNN의 깊이와 3x3 convolution 반복을 설명하는 데 좋지만, AlexNet, ResNet, EfficientNet이 리포트의 발전 흐름을 더 뚜렷하게 만든다고 판단했기 때문이다.
 
 ### 전체 구성 초안
 
