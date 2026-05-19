@@ -1,6 +1,9 @@
+from pathlib import Path
+
 import numpy as np, cv2
 
-image = cv2.imread("./images/edge.jpg", cv2.IMREAD_GRAYSCALE)
+base_dir = Path(__file__).resolve().parent
+image = cv2.imread(str(base_dir / "images" / "edge.jpg"), cv2.IMREAD_GRAYSCALE)
 if image is None: raise Exception("영상파일 읽기 오류")
 
 # OpenCV의 Sobel 함수로 수직, 수평 방향의 에지 검출    
