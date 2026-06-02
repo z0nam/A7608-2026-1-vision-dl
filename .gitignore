@@ -25,3 +25,18 @@ chap03/.mplconfig/
 *.synctex.gz
 *.toc
 *.vrb
+
+# ===== chap06 큰 산출물 (커밋 제외) =====
+# 학습된 모델 가중치(.pt) — 노트북 학습 셀에서 자동 생성됨
+#   chap06/data/VGG-model.pt      (~491MB)  : ch06_colab_6장_발표.ipynb 의 VGG 학습 루프에서 저장
+#   chap06/data/ResNet-model.pt   (~90MB)   : 같은 노트북 ResNet 학습 루프에서 저장
+chap06/data/*.pt
+
+# PennFudanPed 보행자 검출 데이터셋 (~53MB, 공개)
+# 다운로드: https://www.cis.upenn.edu/~jshi/ped_html/PennFudanPed.zip
+# 압축을 풀어 chap06/딥러닝 파이토치 교과서 6-2/PennFudanPed/ 에 두면
+# faster_r_cnn_test.ipynb 가 그대로 동작 (PNGImages/, PedMasks/ 가 보여야 함)
+chap06/딥러닝 파이토치 교과서 6-2/PennFudanPed/
+
+# 노트북 임시 백업 (예: ch06_colab_6장_발표.ipynb.bak)
+*.ipynb.bak
