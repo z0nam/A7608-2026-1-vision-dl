@@ -40,3 +40,9 @@ chap06/딥러닝 파이토치 교과서 6-2/PennFudanPed/
 
 # 노트북 임시 백업 (예: ch06_colab_6장_발표.ipynb.bak)
 *.ipynb.bak
+
+# ===== 이미지분할(U-Net) 큰 산출물 (커밋 제외) =====
+# Oxford-IIIT Pet 데이터셋 (~1.6GB, 공개) — 노트북에서 자동 다운로드됨
+이미지분할을위한신경망/data/
+# 학습된 U-Net 가중치 (~95MB) — 학습 셀에서 자동 생성됨
+*.pth
