@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="1020" viewBox="0 0 1020 1020" font-family="'Apple SD Gothic Neo','Helvetica Neue',sans-serif">
+  <rect width="1020" height="1020" fill="#ffffff"/>
+  <g transform="translate(0,250)">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- input image -->
+  <rect x="30" y="210" width="110" height="100" rx="6" fill="#dce8d5" stroke="#5a7d4a" stroke-width="2"/>
+  <text x="85" y="186" font-size="16" text-anchor="middle">입력 이미지</text>
+  <text x="85" y="272" font-size="40" text-anchor="middle">🐈</text>
+  <line x1="140" y1="260" x2="190" y2="260" stroke="#333" stroke-width="2.5" marker-end="url(#a)"/>
+
+  <!-- shared backbone -->
+  <rect x="192" y="200" width="156" height="120" rx="10" fill="#eaf3fb" stroke="#1f6fb2" stroke-width="2.5"/>
+  <text x="270" y="244" font-size="17" font-weight="700" text-anchor="middle" fill="#1f6fb2">공유</text>
+  <text x="270" y="269" font-size="15" font-weight="700" text-anchor="middle" fill="#1f6fb2">특징 추출 네트워크</text>
+  <text x="270" y="292" font-size="13" text-anchor="middle" fill="#1f6fb2">(backbone, 예: ResNet)</text>
+
+  <!-- branch lines -->
+  <line x1="348" y1="225" x2="600" y2="100" stroke="#333" stroke-width="2.2" marker-end="url(#a)"/>
+  <line x1="348" y1="260" x2="600" y2="262" stroke="#333" stroke-width="2.2" marker-end="url(#a)"/>
+  <line x1="348" y1="295" x2="600" y2="420" stroke="#333" stroke-width="2.2" marker-end="url(#a)"/>
+  <text x="455" y="150" font-size="14" fill="#888" transform="rotate(-26,455,150)">분류 head</text>
+  <text x="455" y="250" font-size="14" fill="#888">검출 head</text>
+  <text x="455" y="372" font-size="14" fill="#888" transform="rotate(26,455,372)">분할 head</text>
+
+  <!-- classification output -->
+  <rect x="602" y="62" width="388" height="78" rx="8" fill="#fdf3f3" stroke="#c0504d" stroke-width="2"/>
+  <text x="620" y="92" font-size="16" font-weight="700">분류</text>
+  <text x="620" y="119" font-size="15" fill="#444">출력: 라벨 1개 (확률 벡터) → "고양이"</text>
+  <text x="972" y="92" font-size="13" fill="#888" text-anchor="end">평가: Top-1 Acc</text>
+
+  <!-- detection output -->
+  <rect x="602" y="223" width="388" height="78" rx="8" fill="#fdf3f3" stroke="#c0504d" stroke-width="2"/>
+  <text x="620" y="253" font-size="16" font-weight="700">검출</text>
+  <text x="620" y="280" font-size="15" fill="#444">출력: 객체별 박스 + 라벨 (가변 개수)</text>
+  <text x="972" y="253" font-size="13" fill="#888" text-anchor="end">평가: mAP</text>
+  <rect x="905" y="266" width="40" height="28" fill="none" stroke="#c0504d" stroke-width="2"/>
+  <rect x="925" y="276" width="30" height="22" fill="none" stroke="#c0504d" stroke-width="2"/>
+
+  <!-- segmentation output -->
+  <rect x="602" y="384" width="388" height="78" rx="8" fill="#fdf3f3" stroke="#c0504d" stroke-width="2"/>
+  <text x="620" y="414" font-size="16" font-weight="700">분할</text>
+  <text x="620" y="441" font-size="15" fill="#444">출력: 픽셀별 라벨 맵 (입력과 동일 해상도)</text>
+  <text x="972" y="414" font-size="13" fill="#888" text-anchor="end">평가: mIoU</text>
+  <g>
+    <rect x="915" y="428" width="12" height="12" fill="#c0504d"/><rect x="927" y="428" width="12" height="12" fill="#c0504d"/><rect x="939" y="428" width="12" height="12" fill="#f0c419"/>
+    <rect x="915" y="440" width="12" height="12" fill="#c0504d"/><rect x="927" y="440" width="12" height="12" fill="#c0504d"/><rect x="939" y="440" width="12" height="12" fill="#4a90d9"/>
+  </g>
+
+  <!-- caption -->
+  <text x="510" y="500" font-size="15" text-anchor="middle" fill="#444">그림 2. 하나의 특징 추출 네트워크를 공유하고 head만 갈아 끼워 분류·검출·분할로 분기한다.</text>
+  <text x="510" y="522" font-size="15" text-anchor="middle" fill="#444">출력이 정밀해질수록(라벨→박스→픽셀) 위치 정보가 세밀해진다.</text>
+  </g>
+</svg>
